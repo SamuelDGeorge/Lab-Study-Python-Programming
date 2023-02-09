@@ -1,0 +1,8 @@
+#Ignore Compile
+.ipynb_checkpoints
+*__pycache__
+*.pyc
+*.json
+
+#VS Code Temp Files
+*.DS_Store
