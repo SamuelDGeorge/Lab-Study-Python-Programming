@@ -1,8 +1,6 @@
 import StudyHelper.OnlineLogger as OnlineLogger
 
-def StudySetup(unique_id, course_taken):
-    notebook_name = "Study_Notebook.ipynb"
-    unique_logset_identifier = "Lab_Study_Comp116_A3_Q2_Spring_2023"
+def StudySetup(unique_id, course_taken, notebook_name, ident):
     base_id = unique_id + '-' + course_taken + '-'
-    OnlineLogger.start(notebook_name, unique_logset_identifier, base_id)
+    OnlineLogger.start(notebook_name, ident, base_id)
     print("Ready to begin study!")

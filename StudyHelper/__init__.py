@@ -1,2 +1,3 @@
-from .Check import Check
+from .Check import CheckWordCount
+from .Check import CheckSyllableCount
 from .StudySetup import StudySetup
