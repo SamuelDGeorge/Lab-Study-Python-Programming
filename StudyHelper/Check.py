@@ -13,26 +13,25 @@ def CheckSyllableCount(function, test):
 
     #calculate answer 
     sol = 0 
-    
-    #define punctuation
-    punc = ['.','!', ',', ':', ';', '?', 
-            '[',']', '{','}',')', '(', '"', "'",'...']
 
-    #handle dashed words
-    test = test.replace('-', ' ')
-    
-    for i in test.split():
-        #handle punctuation
-        for v in punc:
-            i = i.replace(v, '')
-
-        #ignore non-words 
-        if not i.isalpha():
+    #strip punctuation
+    striped = ''
+    for char in test:
+        #preserve space
+        if char == ' ':
+            striped += ' '
             continue
+        #handle dashed words
+        if char == '-':
+            striped += ' '
+            continue
+        #remove all other punctuation
+        if char.isalpha():
+                striped += char
 
+    for i in striped.split():
         #lowercase all
         t = i.lower()
-
         #3 character words
         if len(t) <= 3:
             sol += 1
