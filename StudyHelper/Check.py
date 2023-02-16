@@ -37,14 +37,10 @@ def CheckSyllableCount(function, test):
             sol += 1
             continue 
 
-        #ending is le
-        if t[-2:] == 'le':
-            sol+=1
-            
-        #drop special endings
-        if t[-2:] in ['es','ed','le']:
+        #handle special endings
+        if t[-2:] in ['es','ed']:
             t = t[:-2]
-        elif t[-1:] == 'e':
+        elif t[-1:] == 'e' and t[-2:] != 'le':
             t = t[:-1]
         
         #count remaining vowels 
