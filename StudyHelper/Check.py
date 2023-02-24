@@ -12,6 +12,16 @@ def CheckSyllableCount(function, test):
     val = function(test)
 
     #calculate answer 
+    sol = syllableSolution(test)
+    
+    if val == sol:
+        print("Your Solution Appears Correct")
+        return 
+    print("Your Solution Appears Incorrect")
+
+
+def syllableSolution(test):
+    #calculate answer 
     sol = 0 
 
     #strip punctuation
@@ -47,10 +57,7 @@ def CheckSyllableCount(function, test):
         for v in ['a','e','i','o','u']:
             sol += t.count(v)
     
-    if val == sol:
-        print("Your Solution Appears Correct")
-        return 
-    print("Your Solution Appears Incorrect")
+    return sol
 
 
         
