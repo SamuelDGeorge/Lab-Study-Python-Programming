@@ -10,10 +10,13 @@ def Q5Answer():
     return HTML(filename='./StudyHelper/HTML/NCFeedback.html')
 
 def Q6Answer():
-    return HTML(filename='./StudyHelper/HTML/SolFeedback.html')
+    return HTML(filename='./StudyHelper/HTML/Q6.html')
 
 def Q7Answer():
-    return HTML(filename='./StudyHelper/HTML/SolutionDistribution.html')
+    return HTML(filename='./StudyHelper/HTML/SolFeedback.html')
 
 def Q8Answer():
+    return HTML(filename='./StudyHelper/HTML/SolutionDistribution.html')
+
+def Q9Answer():
     return HTML(filename='./StudyHelper/HTML/InstructorFeedback.html')
